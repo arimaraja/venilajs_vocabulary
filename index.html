@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 120px;
+  margin-top:0px;
+}
+
+.labelclass {
+  text-align: center;
+  font-size: 30px;
+}
+
+.seleclass{
+  text-align: center;
+  font-size: 20px;  
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;  
+}
+
+</style>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<div class="center">
+  <label class="labelclass"> Category </label>
+  <select class="seleclass" id="category" onchange="prepVoc()"> </select>
+  <button class="seleclass" id="btn-pause" onclick="acttimer()">Pause/Resume</button>
+</div>
+
+<script src="vdata.js"></script>
+<script>
+
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+
+var selectBox = document.getElementById('category');
+
+for(var i = 0, l = VocData.Vocabulary.length; i < l; i++){
+  var option = VocData.Vocabulary[i];
+  selectBox.options.add( new Option(option.head, i, option.selected) );
+}
+
+selectBox.value = 20;
+/*
+var client = new XMLHttpRequest();
+client.open('GET', '/foo.txt');
+client.onreadystatechange = function() {
+  alert(client.responseText);
+}
+client.send();
+*/
+
+var isTimerOn = true;
+var itemsel = Number(selectBox.options[selectBox.selectedIndex].value);
+
+var voclist = (VocData.Vocabulary[itemsel].value).split(",");
+var i = 0;
+
+function InvervalTimer(callback, interval) {
+        var timerId, startTime, remaining = 0;
+        var state = 0; //  0 = idle, 1 = running, 2 = paused, 3= resumed
+
+        this.pause = function () {
+            if (state != 1) return;
+
+            remaining = interval - (new Date() - startTime);
+            window.clearInterval(timerId);
+            state = 2;
+        };
+
+        this.resume = function () {
+            if (state != 2) return;
+
+            state = 3;
+            window.setTimeout(this.timeoutCallback, remaining);
+        };
+
+        this.timeoutCallback = function () {
+            if (state != 3) return;
+
+            callback();
+
+            startTime = new Date();
+            timerId = window.setInterval(callback, interval);
+            state = 1;
+        };
+
+        startTime = new Date();
+        timerId = window.setInterval(callback, interval);
+        state = 1;
+}
+var timer = new InvervalTimer(function () {
+        if (i < voclist.length) {
+          document.getElementById("demo").innerHTML = voclist[i];
+            i ++;
+          } else {
+            i = 0;
+          }
+    }, 2000);
+
+function prepVoc() {
+  itemsel = Number(selectBox.options[selectBox.selectedIndex].value);
+  voclist = (VocData.Vocabulary[itemsel].value).split(",");
+  timer.pause();
+  timer.resume();
+}
+
+
+acttimer = function() {
+  if ( isTimerOn === true ) {
+      timer.pause();
+      isTimerOn = false;
+  } else {
+    timer.resume();
+      isTimerOn = true;
+  }
+}
+
+</script>
+
+</body>
+</html>
