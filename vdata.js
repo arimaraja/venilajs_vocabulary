@@ -142,6 +142,39 @@ VocData.Vocabulary =
     { 
        "head" : " Other ", 
        "value" : " sufficient, dialogue, passport photo, state, variety, private sector, practice, gender, creativity, government, individual, original inhabitant, indigenous, demonstration,circuit, guarantee, commerce, carriage, narrative, strike, entrance, chocolate, satellite, decision, prototype, attitude,  activity, recipient, ultrasound, pedestrian safety, daily routine, personal fulfillment, traffic jams, procedures, creation, senior, opportunity, driving license, prize, junior, process, literary, man-made, republicans,waiting list, sewer systems, liberal democracy, democrats, umbrella, frequently updated, lunar calendar, libertarian, burger, videos, fund-raising event, magnet, dialect, ramification, straight,nature conservation, life expectancy, farewell, welfare, encyclopedia,  illiteracy, robot, proficiency, evolution, revolution."
-    }
+    },
+    { 
+       "head" : " ary ", 
+       "value" : "Months of the year: January, February, dictionary, library, primary, secondary, post-secondary, vocabulary, secretary, local library, necessary, voluntary? mandatory, temporary, literary,anniversary,boundary,contemporary,elementary,extraordinary,library,literary,military,necessary,ordinary,primary,salary,secretary,temporary,vary"
+    },
+    { 
+       "head" : " ery ", 
+       "value" : " archery, embroidery, pottery, stationery, nursery, art gallery,battery,delivery,discovery,every,everybody,everyday,everyone,everything,everywhere,gallery,grocery,mystery,recovery,surgery,very"
+    }, 
+    { 
+       "head" : " ea ", 
+       "value" : " research method, leadership, research, Proofreading, teamwork, deadline, overseas students, leaflet, teacher,Health: yoga, disease, meal, bread, cereals, meat, seafood, beans, medicine? treatment, earthquake, sea level, ocean currents, North Korea, New Zealand, lease, paddle steamer, seaplane, colleague, team leaders, cheap, reasonable, realistic, knowledgeable, learn, team, recreation, treadmill, Measurement width, breadth,Weather: humid, weather forecast, breaks, theatre, seabirds, cetacean, creature, leaves, breakdown truck, stream train,  a gap year, leather, feather, creativity, creation,ahead,already,appeal,appear,appearance,area,beach,bean,bear,beat,beautiful,beauty,beneath,bread,break,breakfast,breast,breath,breathe,cheap,clean,clear,clearly,colleague,cream,create,creation,creative,creature,dead,deal,dealer,dear,death,decrease,defeat,disappear,disease,dream,each,eager,ear,early,earn,earnings,earth,ease,easily,east,eastern,easy,eat,European,fear,feature,gear,great,greatest,head,headline,headquarters,health,healthy,hear,hearing,heart,heat,heaven,heavily,heavy,idea,ideal,increase,increased,increasing,increasingly,instead,lead,leader,leadership,leading,leaf,league,lean,learn,learning,least,leather,leave,meal,mean,meaning,meanwhile,measure,measurement,meat,near,nearby,nearly,nuclear,ocean,peace,peak,please,pleasure,reach,react,reaction,read,reader,reading,ready,real,reality,realize,really,reason,reasonable,release,repeat,repeatedly,research,researcher,reveal,scream,sea,search,season,seat,speak,speaker,spread,steady,steal,stream,swear,tea,teach,teacher,teaching,team,tear,teaspoon,theater,threat,threaten,treat,treatment,treaty,weak,wealth,wealthy,weapon,wear,weather,whereas,widespread,yeah,year"
+    },
+    { 
+       "head" : " ory ", 
+       "value" : " history, computer laboratory, introductory,dormitory, satisfactory, voluntary, mandatory, compulsory,category,factory,history,laboratory,memory,story,territory,theory,victory"
+    }, 
+    { 
+       "head" : " ie ", 
+       "value" : "Hobbies: gardening, orienteering, science, humanities, interview, strategies, experience, facilities,work experience, cashier, outdoor activities, balanced diet,Nature: field, environmentally friendly,  cities,Rating and qualities:  expensive, satisfied, efficient, view, ancient, convenient, review, field, audience, species,Other: sufficient, variety, recipient, proficiency,achieve,achievement,ancient,anxiety,audience,barrier,belief,believe,boyfriend,brief,briefly,carrier,chief,client,cookie,die,diet,efficiency,efficient,experience,field,friend,friendly,friendship,girlfriend,ie,ingredient,interview,lie,married,movie,orientation,patient,pie,piece,priest,quiet,quietly,relief,review,science,scientific,scientist,series,society,soldier,Soviet,species,sufficient,tie,variety,view,viewer,worried,yield"
+    }, 
+    { 
+       "head" : " ll ", 
+       "value" : " stamp collection, billiards, collecting data, poll,course outline, main hall, college, full-time, village, waterfall, valley, hill, pollution, landfill, environmentally friendly, hallway, hot-air balloon, colleague, dull, collect, baseball, basketball, american football,   barbell, treadmill, chilly, art gallery,ballet, millennium, fulltime, yellow, satellite, personal fulfillment, umbrella, farewell,  illiteracy,actually,all,alliance,allow,ally,ball,baseball,basically,basketball,bell,bill,billion,brilliant,bullet,call,carefully,cell,challenge,collapse,colleague,collect,collection,collective,college,dramatically,equally,especially,essentially,eventually,excellent,fall,fellow,fill,finally,follow,following,football,full,fully,gallery,generally,gradually,hall,hell,hello,hill,ill,illegal,illness,illustrate,initially,install,intellectual,intelligence,kill,killer,killing,literally,mall,million,naturally,normally,occasionally,originally,overall,personally,physically,politically,poll,pollution,potentially,pull,really,recall,roll,satellite,sell,shall,shell,skill,small,smell,so-called,specifically,still,successfully,tall,tell,totally,typically,usually,valley,village,virtually,wall,well,will,willing,yell,yellow"
+    }, 
+    { 
+       "head" : " iety ", 
+       "value" : " variety,anxiety,society,variety"
+    }, 
+    { 
+       "head" : " ful ", 
+       "value" : " full-time, fulltime, personal fulfillment,awful,beautiful,careful,carefully,full,fully,handful,helpful,painful,powerful,successful,successfully,useful,wonderful"
+    }, 
+
  ];
 

@@ -9,6 +9,12 @@ p {
   margin-top:0px;
 }
 
+.txtclass {
+  text-align: center;
+  font-size: 40px;
+  margin-top:0px;  
+}
+
 .labelclass {
   text-align: center;
   font-size: 30px;
@@ -30,10 +36,17 @@ p {
 }
 
 </style>
+<link rel="stylesheet" type="text/css" href="slider.css">
 </head>
+
 <body>
 
-<p id="demo"></p>
+<p id="vocdisplay"></p>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+<p id="demo"> </p>
 
 <div class="center">
   <label class="labelclass"> Category </label>
@@ -43,6 +56,13 @@ p {
 
 <script src="vdata.js"></script>
 <script>
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+if (slider.value) {
+  output.innerHTML = slider.value; // Display the default slider value
+}
+
 
 // Set the date we're counting down to
 var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
@@ -55,20 +75,14 @@ for(var i = 0, l = VocData.Vocabulary.length; i < l; i++){
 }
 
 selectBox.value = 20;
-/*
-var client = new XMLHttpRequest();
-client.open('GET', '/foo.txt');
-client.onreadystatechange = function() {
-  alert(client.responseText);
-}
-client.send();
-*/
 
 var isTimerOn = true;
 var itemsel = Number(selectBox.options[selectBox.selectedIndex].value);
 
 var voclist = (VocData.Vocabulary[itemsel].value).split(",");
 var i = 0;
+
+setpBar(1,voclist.length,1);
 
 function InvervalTimer(callback, interval) {
         var timerId, startTime, remaining = 0;
@@ -104,19 +118,42 @@ function InvervalTimer(callback, interval) {
         state = 1;
 }
 var timer = new InvervalTimer(function () {
+        var output = document.getElementById("demo");
         if (i < voclist.length) {
-          document.getElementById("demo").innerHTML = voclist[i];
+          document.getElementById("vocdisplay").innerHTML = voclist[i];
             i ++;
+            slider.value = i;
+            output.innerHTML = slider.value;
           } else {
             i = 0;
+            slider.value = 1;
+            output.innerHTML = slider.value;
           }
-    }, 2000);
+    }, 2500);
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
+    timer.pause();
+    i = this.value;
+    timer.resume();
+}
 
 function prepVoc() {
   itemsel = Number(selectBox.options[selectBox.selectedIndex].value);
   voclist = (VocData.Vocabulary[itemsel].value).split(",");
   timer.pause();
   timer.resume();
+
+  setpBar(1,voclist.length,1);
+}
+
+function setpBar(min=1, max=100,value=50) {
+  var pbar = document.getElementById("myRange");
+
+  pbar.min = min;
+  pbar.max = max;
+  pbar.value = value;
 }
 
 
